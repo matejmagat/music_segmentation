@@ -13,13 +13,13 @@ PathLike = Union[str, Path]
 
 @dataclass
 class MelSpecConfig:
-    sample_rate: int = 44100
-    n_fft: int = 2048
-    hop_length: int = 512
-    win_length: Optional[int] = None
+    sample_rate: int = 44100 // 2
+    n_fft: int = 2048 // 2
+    hop_length: int = 512 // 2
+    win_length: Optional[int] = 1024
     n_mels: int = 128
-    f_min: float = 0.0
-    f_max: Optional[float] = None
+    f_min: float = 30.0
+    f_max: Optional[float] = 11025.0
     power: float = 2.0
     normalized_stft: bool = False
     center: bool = True
