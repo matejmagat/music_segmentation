@@ -1,3 +1,5 @@
 .idea/
 .venv/
 musdb18/
+inference/inference_outputs/
+train/checkpoints/
